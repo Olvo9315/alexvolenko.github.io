@@ -13,9 +13,10 @@ header {
     color: #fff;
 }
 
-header h1 {
+header .h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5);
 }
 
 header p {
@@ -38,9 +39,10 @@ section {
     margin: 0 auto;
 }
 
-h2 {
+.h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5);
 }
 
 .feature {
