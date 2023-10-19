@@ -1,13 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     /* background-color: #111; */
-    background: linear-gradient(to right, #0b001f, #000000);
+    background: linear-gradient(to right, #1b003a, #000000);
     color: #fff;
 }
 
@@ -53,6 +49,7 @@ h2 {
 
 img {
     max-width: 100%;
+    border-radius: 1rem;
 }
 
 footer {
@@ -76,19 +73,32 @@ footer p {
 
 .custom-card {
     background: linear-gradient(to right, #1a202c, #2d3748);
-    padding: 1rem;
+    padding: 0.2rem;
+    /* border-radius: 0.75rem; */
+    /* border-radius: 50%; */
+
+    /* Градиентная тень */
+    box-shadow: 0 0 3px 5px rgba(48, 32, 73, 0.9);
+
+    /* Поддержка для старых браузеров */
+    background: #1a202c; /* Базовый цвет */
+    background: linear-gradient(to right, #5700b9, #67007c); /* Градиентный фон */
+
+    position: relative;
+}
+
+.custom-card img {
+    border-radius: 0.55rem;
+}
+
+.custom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0, rgba(173, 165, 165, 0.1) 100%);
+    z-index: -1;
     border-radius: 0.5rem;
-
-    /* Добавление градиентной тени */
-    --box-shadow: 0 4px 6px rgba(185, 0, 231, 0.281); /* Цвет тени в зависимости от ваших предпочтений */
-    box-shadow: var(--box-shadow);
-
-    /* Генерация градиента для тени */
-    @layer utilities {
-        .gradient-shadow {
-            --gradient-shadow: radial-gradient(ellipse at center, transparent 0.1, var(--box-shadow-color) 100%);
-            filter: var(--gradient-shadow);
-            background: var(--box-shadow-color);
-        }
-    }
 }
