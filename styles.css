@@ -31,7 +31,7 @@ header p {
 }
 
 section {
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 .row {
@@ -98,7 +98,7 @@ footer p {
     /* border-radius: 50%; */
 
     /* Градиентная тень */
-    box-shadow: 4px 4px 5px rgba(110, 110, 110, 0.9);
+    /* box-shadow: 4px 4px 5px rgba(110, 110, 110, 0.9); */
 
     /* Поддержка для старых браузеров */
     /*background: #fff; /* Базовый цвет */
