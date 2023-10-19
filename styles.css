@@ -65,6 +65,19 @@ footer p {
 .rounded-mifoto {
     border-radius: 50%;
     /* width: 50%; */
+    background: linear-gradient(to right, #1a202c, #2d3748);
+    padding: 0.2rem;
+    /* border-radius: 0.75rem; */
+    /* border-radius: 50%; */
+
+    /* Градиентная тень */
+    box-shadow: 0 0 3px 5px rgba(48, 32, 73, 0.9);
+
+    /* Поддержка для старых браузеров */
+    background: #1a202c; /* Базовый цвет */
+    background: linear-gradient(to right, #5700b9, #67007c); /* Градиентный фон */
+
+    position: relative;
 }
 
 .parafos {
