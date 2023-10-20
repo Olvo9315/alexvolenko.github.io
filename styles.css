@@ -149,3 +149,24 @@ video {
     /* filter: blur(1px); */
     /* z-index: 0; */
 }
+
+.ability-card {
+    border-radius: 1rem;
+    /* background: linear-gradient(to right, #160030, #07001f); */
+    position: relative;
+    z-index: 3;
+}
+
+.ability-card::before {
+    border-radius: 1rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: #fff; */
+    background: linear-gradient(to right, #7db1ff, #4e0058);
+    opacity: 0.3;
+    z-index: 2;
+}
