@@ -1,18 +1,26 @@
+:root {
+    --light-block-bg: linear-gradient(to right, #ffef63, #ffa551);
+    --dark-nav-bg: linear-gradient(to right, #160030, #07001f);
+    --dark-block-bg: linear-gradient(to right, #2c0035, #0b002e);
+    --light-ability-bg: linear-gradient(to right, #ff9f0f, #ff1550);
+    --dark-ability-bg: linear-gradient(to right, #7db1ff, #4e0058);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     /* background-color: #111; */
-    background: linear-gradient(to right, #160030, #07001f);
+    background: var(--dark-nav-bg);
     color: #fff;
 }
 
 .navbar {
-    background: linear-gradient(to right, #160030, #07001f);
+    background: var(--dark-nav-bg);
 }
 
 .light-mode .navbar {
-    background: linear-gradient(to right, #ffe921, #e25a00);
+    background: var(--light-block-bg);
 }
 .light-mode .navbar .navbar-nav .nav-item .nav-link {
     color: #000;
@@ -172,21 +180,21 @@ video {
     bottom: 0;
     left: 0;
     opacity: 0.9;
-    background: linear-gradient(to right, #2c0035, #0b002e);
+    background: var(--dark-nav-bg);
     transition: background_colorChange 0.5s ease-in-out;
 }
 
 .light-mode .block-card::before {
-    background: linear-gradient(to right, #ffe921, #e25a00);
+    background: var(--light-block-bg);
     transition: background_colorChange 0.5s ease-in-out;
 }
 
 @keyframes background_colorChange {
     from {
-        background: linear-gradient(to right, #ffe921, #e25a00);
+        background: var(--light-block-bg);
     }
     to {
-        background: linear-gradient(to right, #2c0035, #0b002e);
+        background: var(--dark-nav-bg);
     }
 }
 
@@ -208,14 +216,14 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #7db1ff, #4e0058);
+    background: var(--dark-ability-bg);
     opacity: 0.8;
     z-index: -1;
     transition: transform 0.3s ease-in-out;
 }
 
 .light-mode .ability-card::before {
-    background: linear-gradient(to right, #ff9f0f, #ff1550);
+    background: var(--light-ability-bg);
 }
 
 .ability-card:hover {
