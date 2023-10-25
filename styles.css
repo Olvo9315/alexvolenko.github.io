@@ -7,36 +7,50 @@ body {
     color: #fff;
 }
 
+.navbar {
+    background: linear-gradient(to right, #160030, #07001f);
+}
+
+.light-mode .navbar {
+    background: linear-gradient(to right, #ffe921, #e25a00);
+}
+.light-mode .navbar .navbar-nav .nav-item .nav-link {
+    color: #000;
+}
+.light-mode .navbar .navbar-brand {
+    color: #000;
+}
+
+.light-mode body {
+    color: #333;
+}
+
 header {
     text-align: center;
-    padding: 100px 0 150px 0;
-}
-header.dark-mode {
     color: #fff;
-    animation: colorChange 0.5s ease-in-out;
+    padding: 100px 0 150px 0;
 }
 
 .light-mode header {
-    color: #333;
-    animation: colorChange 0.5s ease-in-out;
+    color: #000;
 }
 
 header .h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5);
+    /* text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5); */
 }
 
 header p {
     font-size: 1.2em;
 }
 
-.scroll-down {
+/* .scroll-down {
     display: block;
     margin-top: 20px;
     text-decoration: none;
     color: #fff;
-}
+} */
 
 section {
     padding: 50px 0;
@@ -54,7 +68,11 @@ section {
 .h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5);
+    /* text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5); */
+}
+
+.light-mode .h2 {
+    color: #000;
 }
 
 .feature {
@@ -78,17 +96,11 @@ footer p {
 
 .rounded-mifoto {
     border-radius: 50%;
-    /* width: 50%; */
     background: linear-gradient(to right, #1a202c, #2d3748);
     padding: 4px;
-    /* border-radius: 0.75rem; */
-    /* border-radius: 50%; */
-
     box-shadow: 0 0 3px 5px rgba(48, 32, 73, 0.9);
-
     background: #1a202c;
     background: linear-gradient(to right, #5700b9, #67007c);
-
     position: relative;
 }
 
@@ -96,11 +108,19 @@ footer p {
     color: #b8b8b8;
 }
 
+.light-mode .parafos {
+    color: #333;
+}
+
 .custom-card {
     background: linear-gradient(to right, #d8caff, #bdb2ff);
-    /* background-color: #ffffff; */
     padding: 4px;
     position: relative;
+}
+
+.light-mode .custom-card {
+    /* background: linear-gradient(to right, #d8caff, #bdb2ff); */
+    background: #fff;
 }
 
 .custom-card img {
@@ -141,7 +161,6 @@ video {
     border-radius: 1rem;
     /* background: linear-gradient(to right, #160030, #07001f); */
     position: relative;
-    /* z-index: 1; */
 }
 
 .block-card::before {
@@ -152,27 +171,25 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #2c0035, #0b002e);
     opacity: 0.9;
-    animation: colorChange 0.5s ease-in-out;
-    /* filter: blur(1px); */
-    /* z-index: 0; */
+    background: linear-gradient(to right, #2c0035, #0b002e);
+    transition: background_colorChange 0.5s ease-in-out;
 }
 
 .light-mode .block-card::before {
-    border-radius: 1rem;
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: linear-gradient(to right, #ffe921, #e25a00);
-    opacity: 0.9;
-    animation: colorChange 0.5s ease-in-out;
-    /* filter: blur(1px); */
-    /* z-index: 0; */
+    transition: background_colorChange 0.5s ease-in-out;
 }
+
+@keyframes background_colorChange {
+    from {
+        background: linear-gradient(to right, #ffe921, #e25a00);
+    }
+    to {
+        background: linear-gradient(to right, #2c0035, #0b002e);
+    }
+}
+
 
 .ability-card {
     border-radius: 1rem;
@@ -191,21 +208,24 @@ video {
     right: 0;
     bottom: 0;
     left: 0;
-    /* background-color: #fff; */
     background: linear-gradient(to right, #7db1ff, #4e0058);
     opacity: 0.8;
     z-index: -1;
     transition: transform 0.3s ease-in-out;
 }
 
+.light-mode .ability-card::before {
+    background: linear-gradient(to right, #ff9f0f, #ff1550);
+}
+
 .ability-card:hover {
-    transform: scale(1.05); /* Увеличим элемент при наведении */
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
 .ability-card:hover::before {
     box-shadow: 0 0 3px 5px rgba(204, 172, 255, 0.9);
-    opacity: 0.5; /* Изменим прозрачность при наведении */
+    opacity: 0.9; 
     transition: opacity 0.3s ease-in-out;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -214,7 +234,8 @@ video {
 /* Общие стили кнопки */
 .toggle-theme-button {
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    margin-left: 5px;
     cursor: pointer;
     border: none;
     outline: none;
@@ -223,13 +244,13 @@ video {
 }
 
 /* Стили для светлой темы */
-.light-mode .toggle-theme-button.dark-mode {
+.light-mode .toggle-theme-button {
     background-color: #3498db;
     color: #333;
 }
 
 /* Стили для темной темы */
-.toggle-theme-button.dark-mode {
+.toggle-theme-button {
     background-color: #2c3e50;
     color: #fff;
 }
@@ -250,7 +271,7 @@ video {
 }
 
 /* Применение анимации при добавлении/удалении класса */
-.toggle-theme-button.dark-mode::before {
+.toggle-theme-button::before {
     content: '🌙';
     display: inline-block;
     margin-right: 5px;
@@ -258,7 +279,7 @@ video {
 }
 
 .light-mode .toggle-theme-button::before {
-    content: '☀️'; /* Добавляем солнце emoji */
+    content: '☀️';
     display: inline-block;
     margin-right: 5px;
     animation: colorChange 0.5s ease-in-out;
