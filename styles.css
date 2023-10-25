@@ -7,6 +7,10 @@ body {
     color: #fff;
 }
 
+.navbar {
+    background: linear-gradient(to right, #160030, #07001f);
+}
+
 header {
     text-align: center;
     padding: 100px 0 150px 0;
