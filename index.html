@@ -239,37 +239,99 @@
         <div class="container block-card col-12" style="text-align: justify;">
             <!-- Projects description here -->
             <div class="row">
-                <p class="h2 mb-5 col-12 col-sm-8"><b>Mis proyectos</b></p>
+                <p class="h2 mb-3 col-12 col-sm-8"><b>Mis proyectos</b></p>
             </div>
             <div class="row">
-                <div class="parafos order-first col-12 col-sm-8">
-                    <p class="mb-3">
+                <!-- <div class="parafos order-first col-12 col-sm-8"> -->
+                <div class="projects-container" style="z-index: 3;">
+                    <div class="project-card">
+                        <img src="img/captura1_cont_coches.png" alt="cnt" class="">
+                        <p class="mb-3">
                         <h3><b>Contador de Vehículos en Tiempo Real</b></h3>
-                    </p>
-                    <p class="mb-3">
-                        En uno de mis primeros proyectos en Python, desarrollé un programa que utiliza la biblioteca OpenCV 
-                        y otras herramientas para contar vehículos en tiempo real. El código captura la pantalla a intervalos 
-                        regulares, detecta vehículos en la imagen mediante la biblioteca cvlib y realiza un seguimiento de los mismos.
-                    </p>
-                    <p class="mb-3">
-                        El programa utiliza diversas variables y estructuras de datos para llevar un registro del número de vehículos 
-                        detectados, así como de sus posiciones. Cuando un vehículo es identificado, se verifica si ya fue contado 
-                        anteriormente para evitar duplicaciones. Además, se implementa un mecanismo para identificar si un vehículo 
-                        está en movimiento o parado, mejorando así la precisión del conteo.
-                    </p>
-                    <p class="mb-3">
-                        La ventaja clave de este programa radica en su capacidad para ahorrar tiempo a las empresas al proporcionar 
-                        un método automatizado y eficiente para contar vehículos en un entorno en tiempo real. La detección automática 
-                        de vehículos elimina la necesidad de intervención manual, lo que no solo acelera el proceso, sino que también 
-                        reduce posibles errores humanos.
-                    </p>
-                    <p class="mb-3">
-                        Este proyecto demuestra mi habilidad para aplicar conceptos de programación en Python, trabajar con bibliotecas 
-                        externas como OpenCV y cvlib, y abordar problemas prácticos como el conteo de vehículos en un entorno empresarial.
-                    </p>
-                </div>
-                <div class="col-12 col-sm-4 order-sm-first">
-                    <img src="img/cod_cont_coches.png" alt="cnt" class="">
+                        </p>
+                        <p class="mb-3">
+                            En uno de mis primeros proyectos en Python, desarrollé un programa que utiliza la biblioteca
+                            OpenCV
+                            y otras herramientas para contar vehículos en tiempo real. El código captura la pantalla a
+                            intervalos
+                            regulares, detecta vehículos en la imagen mediante la biblioteca cvlib y realiza un
+                            seguimiento de los mismos.
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
+                        <div class="full-description">
+                            <p class="mb-3">
+                                El programa utiliza diversas variables y estructuras de datos para llevar un registro
+                                del
+                                número de vehículos
+                                detectados, así como de sus posiciones. Cuando un vehículo es identificado, se verifica
+                                si
+                                ya fue contado
+                                anteriormente para evitar duplicaciones. Además, se implementa un mecanismo para
+                                identificar
+                                si un vehículo
+                                está en movimiento o parado, mejorando así la precisión del conteo.
+                            </p>
+                            <p class="mb-3">
+                                La ventaja clave de este programa radica en su capacidad para ahorrar tiempo a las
+                                empresas
+                                al proporcionar
+                                un método automatizado y eficiente para contar vehículos en un entorno en tiempo real.
+                                La
+                                detección automática
+                                de vehículos elimina la necesidad de intervención manual, lo que no solo acelera el
+                                proceso,
+                                sino que también
+                                reduce posibles errores humanos.
+                            </p>
+                            <p class="mb-3">
+                                Este proyecto demuestra mi habilidad para aplicar conceptos de programación en Python,
+                                trabajar con bibliotecas
+                                externas como OpenCV y cvlib, y abordar problemas prácticos como el conteo de vehículos
+                                en
+                                un entorno empresarial.
+                            </p>
+                            <img src="img/captura2_cont_coches.png" alt="cnt" class="">
+                            <img src="img/captura1_cont_coches.png" alt="cnt" class="">
+                            <img src="img/lib_cont_coches.png" alt="cnt" class="">
+                            <img src="img/cod_cont_coches.png" alt="cnt" class="">
+                        </div>
+                        <button class="hide-description-btn">Mostrar menos</button>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/captura1_cont_coches.png" alt="cnt" class="">
+                        <p class="mb-3">
+                        <h3><b>Proyecto 2</b></h3>
+                        </p>
+                        <p class="mb-3">
+                            Descript
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
+                        <div class="full-description">
+                            <p>
+
+                            </p>
+                        </div>
+                        <button class="hide-description-btn">Mostrar menos</button>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="img/captura1_cont_coches.png" alt="cnt" class="">
+                        <p class="mb-3">
+                        <h3><b>Proyecto 3</b></h3>
+                        </p>
+                        <p class="mb-3">
+                            Descript
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
+                        <div class="full-description">
+                            <p>
+
+                            </p>
+                        </div>
+                        <button class="hide-description-btn">Mostrar menos</button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -297,6 +359,29 @@
             /*body.classList.toggle("dark-mode", !body.classList.contains("light-mode"));*/
 
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const projectCards = document.querySelectorAll('.project-card');
+        
+            projectCards.forEach(card => {
+                const readMoreBtn = card.querySelector('.read-more-btn');
+                const hideDescriptionBtn = card.querySelector('.hide-description-btn');
+                const fullDescription = card.querySelector('.full-description');
+        
+                readMoreBtn.addEventListener('click', () => {
+                    fullDescription.style.display = 'block';
+                    readMoreBtn.style.display = 'none';
+                    hideDescriptionBtn.style.display = 'block';
+                });
+        
+                hideDescriptionBtn.addEventListener('click', () => {
+                    fullDescription.style.display = 'none';
+                    readMoreBtn.style.display = 'block';
+                    hideDescriptionBtn.style.display = 'none';
+                });
+            });
+        });
+
     </script>
 </body>
 

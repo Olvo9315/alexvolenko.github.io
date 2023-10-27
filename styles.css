@@ -79,7 +79,11 @@ section {
     /* text-shadow: 4px 4px 5px rgb(255, 255, 255, 0.5); */
 }
 
-.light-mode .h2 {
+.light-mode h2 {
+    color: #000;
+}
+
+.light-mode h3 {
     color: #000;
 }
 
@@ -117,6 +121,10 @@ footer p {
 }
 
 .light-mode .parafos {
+    color: #333;
+}
+
+.light-mode .mb-3 {
     color: #333;
 }
 
@@ -291,4 +299,76 @@ video {
     display: inline-block;
     margin-right: 5px;
     animation: colorChange 0.5s ease-in-out;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.project-card {
+    width: calc(33.33% - 20px); /* для десктопа, учитывая отступы между карточками */
+    margin-bottom: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: inherit;
+}
+
+.read-more-btn {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #3498db; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 8px 15px; /* Внутренние отступы */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.read-more-btn:hover {
+    background-color: #2980b9; /* Цвет фона при наведении */
+}
+
+.hide-description-btn {
+    display: none;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #3498db; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 8px 15px; /* Внутренние отступы */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hide-description-btn:hover {
+    background-color: #2980b9; /* Цвет фона при наведении */
+}
+
+.full-description {
+    display: none;
+}
+
+.full-description img {
+    max-width: 100%; /* Изображения будут масштабироваться в пределах родительского блока */
+    height: auto;
+    margin-top: 10px; /* Добавьте отступ между изображениями */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .project-card {
+        width: 100%;
+        margin-bottom: 100px;
+    }
 }
