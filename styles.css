@@ -83,8 +83,22 @@ section {
     color: #000;
 }
 
+h3 {
+    color: #fff;
+}
+
 .light-mode h3 {
     color: #000;
+}
+
+blnc {
+    color: #fff;
+    font-weight: 600;
+}
+
+.light-mode blnc {
+    color: #000;
+    font-weight: 600;
 }
 
 .feature {
