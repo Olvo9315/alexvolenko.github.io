@@ -334,7 +334,9 @@ video {
 
 .project-card img {
     width: 100%;
-    height: inherit;
+    object-fit: cover;
+    max-height: 270px;
+    object-position: top;
 }
 
 .read-more-btn {
