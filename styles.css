@@ -332,7 +332,17 @@ video {
     flex-direction: column;
 }
 
+.project_title {
+    min-height: 3em; 
+    line-height: 1.5em;
+}
+
 .project-card img {
+    width: 100%;
+    height: inherit;
+}
+
+.title_img img {
     width: 100%;
     object-fit: cover;
     max-height: 270px;
