@@ -249,9 +249,9 @@
                             <img src="img/captura1_cont_coches.png" alt="cnt" class="">
                         </div>
                         <p class="mb-3">
-                        <h3 class="project_title"><b>Contador de Vehículos en Tiempo Real</b></h3>
+                            <h3 class="project_title card_text"><b>Contador de Vehículos en Tiempo Real</b></h3>
                         </p>
-                        <p class="mb-3">
+                        <p class="mb-3 card_text">
                             En uno de mis primeros proyectos en <blnc>Python</blnc>, desarrollé un programa que utiliza la biblioteca
                             <blnc>OpenCV</blnc>
                             y otras herramientas para contar vehículos en tiempo real. El código captura la pantalla a
@@ -260,7 +260,7 @@
                             seguimiento de los mismos.
                         </p>
                         <button class="read-more-btn">Mostrar más</button>
-                        <div class="full-description">
+                        <div class="full-description card_text">
                             <p class="mb-3">
                                 El programa utiliza diversas variables y estructuras de datos para llevar un registro
                                 del
@@ -303,15 +303,15 @@
                             <img src="img/sh5.png" alt="cnt" class="">
                         </div>
                         <p class="mb-3">
-                        <h3 class="project_title"><b>App Web en Node.js y mongoDB</b></h3>
+                        <h3 class="project_title card_text"><b>App Web en Node.js y mongoDB</b></h3>
                         </p>
-                        <p class="mb-3">
+                        <p class="mb-3 card_text">
                             Este proyecto, desarrollado en <blnc>Node.js</blnc> con <blnc>MongoDB</blnc>, consiste en una aplicación web para la gestión 
                             de documentación relacionada con la Ley Orgánica de Protección de Datos (LOPD). Es una solución completa que mejora la eficiencia 
                             en la gestión de documentos y fortalece la comunicación entre personal médico y pacientes.
                         </p>
                         <button class="read-more-btn">Mostrar más</button>
-                        <div class="full-description">
+                        <div class="full-description card_text">
                             <p class="mb-3">
                                 La parte del servidor, definida en el archivo server.js, utiliza <blnc>Express</blnc> para la creación de un servidor web. 
                                 La comunicación con la base de datos <blnc>MongoDB</blnc> se realiza a través de las rutas definidas en el archivo routes.js.
@@ -343,16 +343,16 @@
                             <img src="img/auto_dina5.png" alt="cnt" class="">
                         </div>
                         <p class="mb-3">
-                        <h3 class="project_title"><b>Automatización de Creación de Cuentas de Correo Electrónico</b></h3>
+                        <h3 class="project_title card_text"><b>Automatización de Creación de Cuentas de Correo Electrónico</b></h3>
                         </p>
-                        <p class="mb-3">
+                        <p class="mb-3 card_text">
                             En mi serie de proyectos centrados en la automatización con <blnc>Python</blnc> y la integración de <blnc>API</blnc>, 
                             destaca una solución especialmente eficaz: la optimización de creación de cuentas de correo electrónico.
                             Este script fusiona diversas tecnologías y bibliotecas, representando un hito en la eficiencia 
                             y la simplicidad de la gestión de datos.
                         </p>
                         <button class="read-more-btn">Mostrar más</button>
-                        <div class="full-description">
+                        <div class="full-description card_text">
                             <p class="mb-3">
                                 Uno de los componentes fundamentales de este proyecto es su capacidad para trabajar 
                                 con un archivo de texto, el cual contiene información clave, 
@@ -395,7 +395,7 @@
         <div class="container block-card col-12" style="text-align: justify;">
             <!-- Contact description here -->
             <div class="row">
-                <p class="h2 mb-5 col-12 col-sm-8"><b>Contacta conmigo</b></p>
+                <p class="h2 mb-3 col-12 col-sm-8"><b>Contacta conmigo</b></p>
             </div>
         </div>
     </section>
@@ -422,6 +422,17 @@
                 const fullDescription = card.querySelector('.full-description');
         
                 readMoreBtn.addEventListener('click', () => {
+                    // Hide descriptions of all cards
+                    projectCards.forEach(otherCard => {
+                        const otherMoreBtn = otherCard.querySelector('.read-more-btn');
+                        const otherHideBtn = otherCard.querySelector('.hide-description-btn');
+                        const otherFullDescription = otherCard.querySelector('.full-description');
+                        otherMoreBtn.style.display = 'block'
+                        otherHideBtn.style.display = 'none';
+                        otherFullDescription.style.display = 'none';
+                    });
+        
+                    // Show description of the clicked card
                     fullDescription.style.display = 'block';
                     readMoreBtn.style.display = 'none';
                     hideDescriptionBtn.style.display = 'block';

@@ -4,6 +4,10 @@
     --dark-block-bg: linear-gradient(to right, #2c0035, #0b002e);
     --light-ability-bg: linear-gradient(to right, #ff9f0f, #ff1550);
     --dark-ability-bg: linear-gradient(to right, #7db1ff, #4e0058);
+    --dark-box-shadow: 0 0 5px rgba(52, 152, 219, 0.7), 0 0 10px rgba(142, 68, 173, 0.7);
+    --dark-box-shadow-hover: 0 0 15px #7db1ff, 0 0 30px #4e0058;
+    --light-box-shadow: 0 0 5px rgba(52, 152, 219, 0.7), 0 0 10px #ff1550;
+    --light-box-shadow-hover: 0 0 15px #7db1ff, 0 0 30px #ff1550;
 }
 
 body {
@@ -324,19 +328,27 @@ video {
 
 .project-card {
     width: calc(33.33% - 20px); /* для десктопа, учитывая отступы между карточками */
+    height:fit-content;
     margin-bottom: 50px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    transition: transform 0.3s ease-in-out;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
-    /* transition: box-shadow 0.5s ease; */
-    /* box-shadow:#2980b9 5px 5px 5px 5px; */
+    box-shadow: var(--dark-box-shadow);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .project-card:hover {
-    /* box-shadow: 0 0 15px rgba(52, 152, 219, 0.7), 0 0 30px rgba(142, 68, 173, 0.7); */
+    box-shadow: var(--dark-box-shadow-hover);
+    /* animation: shadowGradient 3s infinite; */
+}
+
+.light-mode .project-card {
+    box-shadow: var(--light-box-shadow);
+}
+
+.light-mode .project-card:hover {
+    box-shadow: var(--light-box-shadow-hover);
 }
 
 .project_title {
@@ -347,6 +359,10 @@ video {
 .project-card img {
     width: 100%;
     height: inherit;
+}
+
+.card_text {
+    padding: 0 10px;
 }
 
 .title_img img {
@@ -364,7 +380,7 @@ video {
     color: #fff; /* Цвет текста */
     padding: 8px 15px; /* Внутренние отступы */
     border: none;
-    border-radius: 4px;
+    border-radius: 0 0 1rem 1rem;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -380,7 +396,7 @@ video {
     color: #fff; /* Цвет текста */
     padding: 8px 15px; /* Внутренние отступы */
     border: none;
-    border-radius: 4px;
+    border-radius: 0 0 1rem 1rem;
     transition: background-color 0.3s ease-in-out;
 }
 
