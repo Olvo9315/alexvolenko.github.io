@@ -65,7 +65,7 @@ header p {
 } */
 
 section {
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .row {
@@ -415,6 +415,54 @@ video {
     margin-top: 10px; /* Добавьте отступ между изображениями */
 }
 
+.contact_icons {
+    display: flex;
+}
+
+.contact_icons img {
+    max-width: 35px;
+    margin-right: 5px;
+}
+
+.contact_icons > span {
+    margin: 20px 0 0 20px;
+}
+
+.icon_text {
+    color: #fff;
+}
+
+.light-mode .icon_text {
+    color: #000;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(169, 169, 169, 0.5); 
+    color: #fff; 
+    border: none;
+    border-radius: 8px; 
+    padding: 20px 10px 0px 10px;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 5px #888;  */
+    text-align: center;
+    line-height: 30px;
+}
+
+#scrollToTopBtn span {
+    font-size: 70px;  
+    display: inline-block; 
+    vertical-align: middle; 
+    opacity: 0.7;
+}
+
+#scrollToTopBtn:hover {
+    background-color: rgba(105, 105, 105, 0.9);
+}
+
 /* Для мобильных устройств */
 @media (max-width: 768px) {
     .project-card {
@@ -424,5 +472,13 @@ video {
 
     .h2 {
         text-align: center;
+    }
+
+    .contact_icons {
+        flex-direction: column;
+    }
+    .contact_icons > span {
+        width: 100%;
+        margin: 10px;
     }
 }
