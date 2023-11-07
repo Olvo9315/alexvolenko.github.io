@@ -126,12 +126,13 @@ footer p {
 
 .rounded-mifoto {
     border-radius: 50%;
-    background: linear-gradient(to right, #1a202c, #2d3748);
     padding: 4px;
-    box-shadow: 0 0 3px 5px rgba(48, 32, 73, 0.9);
-    background: #1a202c;
     background: linear-gradient(to right, #5700b9, #67007c);
     position: relative;
+}
+
+.light-mode .rounded-mifoto {
+    background: linear-gradient(to right, #d8caff, #bdb2ff);
 }
 
 .parafos {
