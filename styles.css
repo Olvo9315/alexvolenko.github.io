@@ -337,8 +337,8 @@ video {
     border-radius: 1rem;
     box-shadow: var(--dark-box-shadow);
     transform: scale(1);
-    transition: box-shadow 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
+    /* transition: box-shadow 3.3s ease-in-out; */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .project-card:hover {
