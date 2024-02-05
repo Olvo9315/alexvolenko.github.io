@@ -114,6 +114,11 @@ img {
     border-radius: 1rem;
 }
 
+.project_img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
